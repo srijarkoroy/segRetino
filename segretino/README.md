@@ -19,12 +19,12 @@ The Dice Loss Function may be initialized and called by running the following co
 
 ```python
 loss_fn = DiceLoss()
-score, loss = loss(output_var, target_var) #output_var is the output mask and target_var is the label
+score, loss = loss_fn(output_var, target_var) #output_var is the output mask and target_var is the label
 ```
 ### Intersection over Union
 The IoU Loss Function may be initialized and called by running the following code snippet:
 
 ```python
 loss_fn = IoU()
-score, loss = loss(output_var, target_var) #output_var is the output mask and target_var is the label
+score, loss = loss_fn(output_var, target_var) #output_var is the output mask and target_var is the label
 ```

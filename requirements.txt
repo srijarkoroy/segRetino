@@ -1,0 +1,8 @@
+torch==1.9.0
+numpy==1.21.2
+opencv-python==4.5.3.56
+imageio==2.9.0
+albumentations==1.0.3
+gdown==3.13.0
+glob==3.5
+tqdm==4.62.2

@@ -1,5 +1,5 @@
 import torch
-
+from PIL import Image
 import numpy as np
 import os
 import json
@@ -7,7 +7,7 @@ import gdown
 import time
 import cv2
 
-from segRetino.segretino.unet import UNET
+from unet import UNET
 
 __PREFIX__ = os.path.dirname(os.path.realpath(__file__))
 #print(os.path.dirname(os.path.realpath(__file__)))
@@ -20,22 +20,22 @@ class SegRetino(object):
         self.size = size
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
     
-    def inference(self, set_weight_dir = 'unet.pth', set_gen_dir = 'result_img'):
+    def inference(self, set_weight_dir = 'unet.pth', path = 'output.png', blend = True, blend_path = 'blend.png'):
 
         set_weight_dir = __PREFIX__ + "/weights/" + set_weight_dir
 
 
         ''' saving generated images in a directory '''
 
-        def save_image(set_gen_dir):
+        def save_image(path):
 
-            if os.path.exists(set_gen_dir):
+            if os.path.exists(path):
                 print("Found directory for saving generated images")
                 return 1
 
             else:
                 print("Directory for saving images not found, making a directory named 'result_img'")
-                os.mkdir(set_gen_dir)
+                os.mkdir(path)
                 return 1
         
 
@@ -118,7 +118,19 @@ class SegRetino(object):
         cat_images = np.concatenate(
             [line, pred_y * 255], axis=1
         )
-        cv2.imwrite(f"result.png", cat_images)
+
+        image = cv2.resize(image, self.size)
+
+        cv2.imwrite(path, cat_images)
+
+        if blend:
+
+            cat_images = cv2.imread(path)
+            cat_images = cv2.resize(cat_images, self.size)
+
+            blend = cv2.addWeighted(image, 0.8, cat_images, 0.5, 0)
+
+            cv2.imwrite(blend_path, blend)
 
         fps = 1/np.mean(time_taken)
         print("FPS: ", fps)

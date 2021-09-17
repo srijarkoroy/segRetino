@@ -1,4 +1,6 @@
 # Retina Blood Vessels Segmentation
+This is an implementation of the research paper <a href = "https://researchbank.swinburne.edu.au/file/fce08160-bebd-44ff-b445-6f3d84089ab2/1/2018-xianchneng-retina_blood_vessel.pdf">"Retina Blood Vessel Segmentation Using A U-Net Based Convolutional Neural Network"</a> written by Wang Xiancheng, Li Weia, *et al.*
+
 
 Check out the standalone demo notebook and run segRetino inferences here.
 

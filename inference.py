@@ -7,7 +7,7 @@ import gdown
 import time
 import cv2
 
-from unet import UNET
+from segRetino.segretino.unet import UNET
 
 __PREFIX__ = os.path.dirname(os.path.realpath(__file__))
 #print(os.path.dirname(os.path.realpath(__file__)))

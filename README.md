@@ -100,3 +100,9 @@ Check out the standalone demo notebook and run segRetino inferences <a href = 'h
 
 **Note**: Is is advisable to use a GPU for running the imferences since performing segmentation on 512x512 images with a heavy UNET architecture is expensive.
 
+## Results from Implementation
+Original Image | Masked Image | Blend Image |
+:-------------: | :---------: | :-----: |
+<img src="results/input/input1.png" height=200 width=200>| <img src="results/output/output1.png" height=200 width=200>| <img src="results/blend/blend1.png" height=200 width=200> |
+<img src="results/input/input2.png" height=200 width=200>| <img src="results/output/output2.png" height=200 width=200>| <img src="results/blend/blend2.png" height=200 width=200> |
+<img src="results/input/input3.png" height=200 width=200>| <img src="results/output/output3.png" height=200 width=200>| <img src="results/blend/blend3.png" height=200 width=200> |

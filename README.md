@@ -1,6 +1,7 @@
 # Retina Blood Vessels Segmentation
 
 Check out the standalone demo notebook and run segRetino inferences here.
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/srijarkoroy/segRetino/blob/main/demo/seg_retino_demo.ipynb#scrollTo=nM5uNK83IS-S)
 
 

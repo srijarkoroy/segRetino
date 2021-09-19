@@ -1,5 +1,5 @@
 ## Data Loading
-The ```augment.py``` file contains a fucntion for loading the DRIVE Dataset, which can be called using the following code snippet:
+The ```augment.py``` file contains a function for loading the DRIVE Dataset, which can be called using the following code snippet:
 ```python
 from augment import load_data
 

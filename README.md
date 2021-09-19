@@ -17,7 +17,7 @@ It consists of a total of JPEG 40 color fundus images; including 7 abnormal path
 ### Guidelines to download, setup and use the dataset
 The DRIVE dataset may be downloaded <a href = "https://drive.google.com/drive/folders/13-zz_Gtxo1oe7Vu3P2ZO9FocZrhXlts5?usp=sharing">here</a> as two files named *training.zip* and *test.zip*. 
 
-**Please write the following commands on your terminal to extract the file in the proper directory**
+**Please write the following commands on your terminal to extract the file in the proper directory.**
 ```bash
   $ mkdir drive
   $ unzip </path/to/training.zip> -d </path/to/drive>

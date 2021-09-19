@@ -104,7 +104,7 @@ seg.inference(set_weight_dir = 'unet.pth', path = '<path/to/save/masked/image>',
 ```
 Check out the standalone demo notebook and run segRetino inferences <a href = 'https://colab.research.google.com/github/srijarkoroy/segRetino/blob/main/demo/seg_retino_demo.ipynb'>here</a>.
 
-**Note**: Is is advisable to use a GPU for running the imferences since performing segmentation on 512x512 images with a heavy UNET architecture is expensive.
+**Note**: Is is advisable to use a GPU for running the inferences since performing segmentation on 512x512 images with a heavy UNET architecture is expensive.
 
 ## Results from Implementation
 Original Image | Masked Image | Blend Image |

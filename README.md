@@ -20,7 +20,8 @@ The DRIVE dataset may be downloaded <a href = "https://drive.google.com/drive/fo
 **Please write the following commands on your terminal to extract the file in the proper directory**
 ```bash
   $ mkdir drive
-  $ unzip </path/to/dataset.zip> -d </path/to/drive>
+  $ unzip </path/to/training.zip> -d </path/to/drive>
+  $ unzip </path/to/test.zip> -d </path/to/drive>
 ```
 The resulting directory structure should be:
 ```
@@ -58,7 +59,7 @@ The UNET CNN architecture may be divided into the *Encoder*, *Bottleneck* and *D
 - Image preprocessing included augmentations like HorizontalFlip, VerticalFlip, Rotate.
 - Dataloader object was created for both training and validation data
 - Training process was carried out for 50 epochs, using the Adam Optimizer with a Learning Rate 1e-4.
-- Validation was carried out using DiceLoss and Intersection over Union Loss. 
+- Validation was carried out using Dice Loss and Intersection over Union Loss. 
 
 ## Installation and Quick Start
 To use the repo and run inferences, please follow the guidelines below
@@ -92,6 +93,7 @@ Once the path has been mentioned, the model may be trained by running the comman
 ```bash
   $ python3 train.py
 ```
+**Note**: If images have not been augmented, please see the instructions for augmentation <a href="https://github.com/srijarkoroy/segRetino/tree/main/data">here</a>.
 
 The test file saves two images in the mentioned paths, a masked image showing only the blood vessels, and a blend image showing the blood vessels within the retina. If you don't want to save the blend image, consider running the following code snippet:
 
@@ -112,3 +114,12 @@ Original Image | Masked Image | Blend Image |
 <img src="results/input/input1.png" height=200 width=200>| <img src="results/output/output1.png" height=200 width=200>| <img src="results/blend/blend1.png" height=200 width=200> |
 <img src="results/input/input2.png" height=200 width=200>| <img src="results/output/output2.png" height=200 width=200>| <img src="results/blend/blend2.png" height=200 width=200> |
 <img src="results/input/input3.png" height=200 width=200>| <img src="results/output/output3.png" height=200 width=200>| <img src="results/blend/blend3.png" height=200 width=200> |
+
+<hr>
+
+## Contributors
+
+- <a href = "https://github.com/srijarkoroy">Srijarko Roy</a>
+- <a href = "https://github.com/SaishaShetty">Saisha Shetty</a>
+- <a href = "https://github.com/KushGrandhi">Kush Grandhi</a>
+- <a href = "https://github.com/Reyeah">Ria Gala</a> 

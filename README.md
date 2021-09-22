@@ -123,3 +123,6 @@ Original Image | Masked Image | Blend Image |
 - <a href = "https://github.com/SaishaShetty">Saisha Shetty</a>
 - <a href = "https://github.com/KushGrandhi">Kush Grandhi</a>
 - <a href = "https://github.com/Reyeah">Ria Gala</a> 
+
+## Contribution
+Contributions are always welcome! Please check out this <a href="https://github.com/srijarkoroy/segRetino/blob/main/docs/contributing.md">doc</a> for Contribution Guidelines. 
